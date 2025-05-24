@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic[email]
+passlib[bcrypt]
+python-jose[cryptography]
+pymysql
+mysql-connector-python
+pandas
+dotenv
+icecream
+pytest 
+httpx
