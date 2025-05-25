@@ -2,13 +2,13 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.schemas import orders as order_schema
 from app.models import orders as order_model
-from app.database_connect import database_connect
+from app.database_connect import SessionLocal, Base, engine
 
 router = APIRouter()
-db = database_connect()
+
 
 def get_db():
-    db_session = db.SessionLocal()
+    db_session = SessionLocal()
     try:
         yield db_session
     finally:

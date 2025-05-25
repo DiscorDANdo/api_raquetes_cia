@@ -3,13 +3,12 @@ from sqlalchemy.orm import Session
 
 from app.schemas import products as product_schema
 from app.models import products as product_model
-from app.database_connect import database_connect
+from app.database_connect import SessionLocal, Base, engine
 
 router = APIRouter()
-db = database_connect()
 
 def get_db():
-    db_session = db.SessionLocal()
+    db_session = SessionLocal()
 
     try:
         yield db_session

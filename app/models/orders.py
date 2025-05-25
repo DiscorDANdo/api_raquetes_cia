@@ -1,9 +1,7 @@
 from sqlalchemy import Column, Integer, DateTime, ForeignKey, func
-from app.database_connect import database_connect
+from app.database_connect import Base
 
-db = database_connect()
-
-class order(db.Base):
+class order(Base):
     __tablename__ = "orders"
 
     id = Column(Integer, primary_key=True, index=True)
