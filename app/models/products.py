@@ -8,4 +8,4 @@ class product(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(255), nullable=False, unique=True, index=True)
     category = Column(String(255), nullable=False, unique=False, index=True)
-    value = Column(Float, nullable=False)
+    price = Column(Float, nullable=False)
